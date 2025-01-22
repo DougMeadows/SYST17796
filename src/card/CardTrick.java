@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package card;
-//test
+//original master
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects

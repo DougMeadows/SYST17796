@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package card;
+//original master
 
 /**
  * A class that models playing card Objects. Cards have 
