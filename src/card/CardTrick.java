@@ -15,6 +15,7 @@ import java.util.Scanner;
 
 //Doug Meadows
 //991176465
+//merged master
 
 public class CardTrick {
 
