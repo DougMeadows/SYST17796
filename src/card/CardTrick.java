@@ -17,52 +17,38 @@ import java.util.Scanner;
 //991176465
 
 public class CardTrick {
-    
+
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
         Random random = new Random();
 
-        //make 7 cards, add them to hand
+        // Generate 7 random cards
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
-            c.setValue(random.nextInt(13) + 1); //random number for card value
-            c.setSuit(Card.SUITS[random.nextInt(4)]); //random suit
-            magicHand[i] = c; //put card in hand
+            c.setValue(random.nextInt(13) + 1); // Random value between 1 and 13
+            c.setSuit(Card.SUITS[random.nextInt(4)]); // Random suit from SUITS array
+            magicHand[i] = c; // Add card to the hand
         }
-        
+
         //hard coded lucky card
         Card luckyCard = new Card();
         luckyCard.setValue(2);
         luckyCard.setSuit("Clubs");
 
-        //user picks card
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your cards value (1 for Ace, 11 for Jack, 12 for Queen, 13 for King):");
-        int userValue = scanner.nextInt();
-        scanner.nextLine();
-
-        System.out.println("Enter your cards suit (Hearts, Diamonds, Spades, Clubs):");
-        String userSuit = scanner.nextLine();
-
-        //create users card
-        Card userCard = new Card();
-        userCard.setValue(userValue);
-        userCard.setSuit(userSuit);
-
-        //check magic hand for card
-        boolean card_match = false;
+        //check magic hand for lucky card
+        boolean luckyCardFound = false;
         for (Card card : magicHand) {
-            if (card.getValue() == userCard.getValue() && card.getSuit().equalsIgnoreCase(userCard.getSuit())) {
-                card_match = true;
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equalsIgnoreCase(luckyCard.getSuit())) {
+                luckyCardFound = true;
                 break;
             }
         }
 
-        //result
-        if (card_match) {
-            System.out.println("Congratulations! Your card is in the magic hand.");
+        //output result
+        if (luckyCardFound) {
+            System.out.println("The lucky card (2 of Clubs) is in the magic hand!");
         } else {
-            System.out.println("Sorry, your card is not in the magic hand.");
+            System.out.println("The lucky card (2 of Clubs) is not in the magic hand.");
         }
 
         //print magic hand
