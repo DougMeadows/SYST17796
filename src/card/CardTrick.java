@@ -29,6 +29,11 @@ public class CardTrick {
             c.setSuit(Card.SUITS[random.nextInt(4)]); //random suit
             magicHand[i] = c; //put card in hand
         }
+        
+        //hard coded lucky card
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit("Clubs");
 
         //user picks card
         Scanner scanner = new Scanner(System.in);
