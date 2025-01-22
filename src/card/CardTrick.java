@@ -10,6 +10,10 @@ package card;
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author srinivsi
  */
+
+//Doug Meadows
+//991176465
+
 public class CardTrick {
     
     public static void main(String[] args)

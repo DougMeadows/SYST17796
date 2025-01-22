@@ -13,6 +13,10 @@ package card;
  * add your name as a modifier.
  * @author srinivsi
  */
+
+//Doug Meadows
+//991176465
+
 public class Card {
 
    private String suit; //clubs, spades, diamonds, hearts
